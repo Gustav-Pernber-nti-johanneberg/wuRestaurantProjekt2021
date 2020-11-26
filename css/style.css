@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500&family=Alatsi&display=swap');
+
+*{
+margin: 0;
+font-family: 'Josefin Sans', sans-serif;
+
+}
+
+#wrapper{
+
+    display: grid;
+    width: 100%;
+    height: 100%;
+
+    grid-template-areas:  
+    'hd hd hd hd'
+    'a1 a1 a1 a1'
+    's2 s2 s2 s2'
+    'fo fo fo fo'
+    ;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 800px 500px 600px 150px ;
+}
+
+
+.header{
+    grid-area: hd;
+    background-image: url(/wuRestaurantProjekt2021/img/Burgare2_blur2.jpg);
+    background-size: cover; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+
+}
+
+.title{
+    color: white;
+    margin-bottom: 70px;
+    text-shadow: 2px 3px 3px black;
+
+}
+
+.nav{
+    padding-right: 110px;
+    padding-left: 30px;
+    background: rgba(13, 95, 172, 0.7);
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    grid-column: 1 / 5;
+    grid-row: 1 / 1;
+    height: 100px;
+    
+}
+
+.nav > ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.nav > ul > li > a{
+    margin-left: 70px;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    background: rgb(255 153 64);
+    border-radius: 5px;
+}
+
+.nav_logo {
+    max-width: 90px;
+    max-height: auto;
+    padding: 10px;
+
+}
+
+
+.article1{
+    grid-area: a1;
+    background: palegreen;
+    display: grid;
+
+    width: 100%;
+    height: 100%;
+
+    grid-template-areas:  
+    'ne ho'
+    ;
+
+    grid-template-columns: auto 500px ;
+    grid-template-rows: 1fr;
+}
+
+.hours{
+    grid-area: ho;
+    background: rgb(13, 157, 219);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.hours > h1{
+    padding: 60px;
+    font-size: 60px;
+}
+
+.hours > p{
+
+    padding: 20px;
+    font-size: 35px;
+
+}
+.news{
+
+    background:  rgb(255 153 64);
+
+}
+
+.section2{
+    grid-area: s2;
+    background: paleturquoise;
+
+}
+
+.footer{
+
+    grid-area: fo;
+    background: plum;
+}
