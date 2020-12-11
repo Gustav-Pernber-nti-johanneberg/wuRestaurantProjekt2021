@@ -5,7 +5,6 @@
 *{
 margin: 0;
 font-family: 'Josefin Sans', sans-serif;
-
 }
 
 #wrapper{
@@ -22,29 +21,41 @@ font-family: 'Josefin Sans', sans-serif;
     ;
 
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 800px 700px 600px 150px ;
+    grid-template-rows: 800px 700px 700px 150px ;
 }
+
 
 
 .header{
     grid-area: hd;
-    background-image: url(/wuRestaurantProjekt2021/img/Burgare2_blur2.jpg);
+    background-image: url('../img/bakgrund1_ps.jpg');
+    background-attachment: fixed;
     background-size: cover; 
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     font-size: 80px;
-
+    flex-wrap: wrap;
 }
 
 .title{
-    color: white;
-    margin-bottom: 70px;
+    color: wheat; 
+    margin-top: 250px;
     text-shadow: 2px 3px 3px black;
     letter-spacing: 5px;
+}
+
+.under_title{
+    margin-bottom: 300px;
+    color: wheat;
+    font-size: 40px;
+    text-shadow: 2px 3px 3px black;
+    letter-spacing: 3px;
 
 }
+
+
 
 .nav{
     padding-right: 110px;
@@ -58,7 +69,7 @@ font-family: 'Josefin Sans', sans-serif;
     top: 0;
     grid-column: 1 / 5;
     grid-row: 1 / 1;
-    height: 100px;
+    height: 80px;
     
 }
 
@@ -68,26 +79,50 @@ font-family: 'Josefin Sans', sans-serif;
     justify-content: space-between;
     align-items: center;
     list-style: none;
+
 }
 
-.nav > ul > li > a{
+
+.nav > ul > li > a {
+
     margin-left: 70px;
-    padding: 20px;
+    padding: 14px;
     text-decoration: none;
     color: black;
     font-size: 25px;
-    background: rgb(255 153 64);
+    background: rgb(255, 153, 64);
     border-radius: 5px;
+    transition: 500ms;
+
+
+    
 }
 
-.nav_logo {
-    max-width: 90px;
+
+.nav > ul > li > a:hover {
+    background:wheat;
+    font-size: 30px;
+    transition: 500ms;
+}
+
+
+.nav > ul > li > a:active{
+    border: 6px solid wheat;
+    transition: 500ms;
+}
+
+.nav_logo_img {
+    max-width: 70px;
     max-height: auto;
-    padding: 10px;
+    padding-top: 5px;
+    
 }
 
 
-.article1{
+
+
+
+.news_hours{
     grid-area: a1;
     background: palegreen;
     display: grid;
@@ -103,19 +138,21 @@ font-family: 'Josefin Sans', sans-serif;
     grid-template-rows: 1fr;
 }
 
+
+
 .hours{
     grid-area: ho;
     background: rgb(13, 157, 219);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: flex-start;
+    padding-top: 45px;
 }
 
 .hours > h1{
-
     font-size: 60px;
+    margin-bottom: 100px;
 }
 
 .hours > p{
@@ -126,11 +163,12 @@ font-family: 'Josefin Sans', sans-serif;
 .time{
     margin-top: -20px;
     margin-bottom: 30px;
-
 }
 
+
+
 .news{
-    background: rgb(255 153 64);
+    background: rgb(255, 153, 64);
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -141,51 +179,141 @@ font-family: 'Josefin Sans', sans-serif;
     padding-right: 60px;
     padding-bottom: 20px;
 
-    flex: 1;
-    
+    flex: 1; 
 }
 
-.news > h1{
-    
+.news > h1{ 
     font-size: 60px;
     padding-bottom: 30px;
 }
 
+.news_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+    flex-wrap: nowrap;
+
+}
 
 .news_content{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex: 1;
+    flex-wrap: nowrap;
     width: 100%;
-
-
-}
-
-
-.news_content > h3{
-
-font-size: 40px;
+    margin: 25px;
 
 }
 
-.news_content > img{
-    object-fit: fill;
+.news_img{
+    flex: 30%
+}
+
+.news_img > img{
     height: auto;
     width: 120px;
-    
     border-radius: 10px;
 
 }
 
-
-.section2{
-    grid-area: s2;
-    background: paleturquoise;
+.news_title{
+    font-size: 35px;
+    flex: 60%
 }
+
+.news_price{
+    font-size: 25px;
+    flex: 10%;
+}
+
+
+
+#om_oss{
+    grid-area: s2;
+    background-image: url('../img/bakgrund2_ps.jpg');
+    background-attachment: fixed;
+    background-size: cover; 
+    background-position: 0% 50% ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+   
+}
+
+
+.om_oss_title > h1{
+    color: wheat;
+    font-size: 60px;
+    text-shadow: 2px 3px 3px black;
+    letter-spacing: 3px;
+    margin-bottom: 100px;
+    margin-top: 70px;
+}
+
+.om_oss_content > p{
+    color: wheat;
+    text-shadow: 2px 3px 3px black;
+    font-size: 30px;
+    margin-bottom: 80px;
+
+}
+
+#om_oss >img{
+    max-height: auto;
+    max-width: 150px;
+}
+
+
+
 
 .footer{
     grid-area: fo;
-    background: plum;
+    background: rgb(13, 95, 172);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
 }
+
+.footer_wrapper{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+   
+
+}
+
+.footer_content{
+    /*color: rgb(255, 153, 64);*/
+    font-size: 30px;
+    letter-spacing: 1px;
+    position: absolute;
+    
+
+}
+
+.footer_wrapper > img{
+    max-width: 80px;
+    height: auto;
+   
+
+    align-self: flex-start;
+
+    margin-left: 30px;
+
+
+   /* -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%); */
+
+}
+
