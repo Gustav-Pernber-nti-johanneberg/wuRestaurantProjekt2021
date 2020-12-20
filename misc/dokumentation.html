@@ -11,6 +11,10 @@
     <title>Dokumentation projekt Vt</title>
 
     <style>
+        * > img{
+           max-width: 900px ;
+        }
+
         table, td, th {
             border: 1px solid black
         }
@@ -28,6 +32,7 @@
     <h2>2. Planering</h2>
 
     <h3>2.1 Handskiss</h3>
+    <img src="Skiss_av_sida.jpg" alt="">
     <!-- Här lägger du en bild på din handskiss av layouten. Viktigt att du beskriver vilka boxelement som ska användas. Visa även hur du tänker med ditt grid (Hur många kolumner?) -->
 
     <h3>2.2 Schema</h3>
@@ -38,27 +43,7 @@
             <th>Vecka</th><th>På lektionen</th><th>Utanför lektionen</th>
         </tr>
 
-        <tr>
-            <td>47</td>
-            <td>
-               
-            <!-- Vad görs på lektionen vecka 4? -->
-            </td>
-            <td>
-            <!-- Vad görs utanför lektionen vecka 4? -->
-            </td>
-        </tr>
-
-        <tr>          
-            <td>48</td>
-            <td>
-            
-            <!-- Vad görs på lektionen vecka 5? -->
-            </td>
-            <td>
-            <!-- Vad görs utanför lektionen vecka 5? -->
-            </td>
-        </tr>
+ 
 
         <tr>          
             <td>49</td>
@@ -94,45 +79,6 @@
             </td>
         </tr>
 
-        <tr>          
-            <td>9</td>
-            <td>
-            <!-- Vad görs på lektionen vecka 9? -->
-            </td>
-            <td>
-            <!-- Vad görs utanför lektionen vecka 9? -->
-            </td>
-        </tr>
-
-        <tr>          
-            <td>10</td>
-            <td>
-            <!-- Vad görs på lektionen vecka 10? -->
-            </td>
-            <td>
-            <!-- Vad görs utanför lektionen vecka 10? -->
-            </td>
-        </tr>
-
-        <tr>           
-            <td>11</td>
-            <td>
-            <!-- Vad görs på lektionen vecka 11? -->
-            </td>
-            <td>
-            <!-- Vad görs utanför lektionen vecka 11? -->
-            </td>
-        </tr>
-
-        <tr>          
-            <td>12</td>
-            <td>
-            <!-- Vad görs på lektionen vecka 12? -->
-            </td>
-            <td>
-            <!-- Vad görs utanför lektionen vecka 12? -->
-            </td>
-        </tr>
 
     </table>
 
@@ -188,22 +134,68 @@
 De andra sidorna borde gå ganska snabbt att göra då de nog är rätt lika index sidan men jag kommer definitivt behöva jobba mer hemma men de e fine.
     <!-- Fyll på med dokumentation här. -->
 
-    <h3>Lektion vecka 10</h3>
+    <h3>Lektion vecka 51</h3>
+Alla sidor blev klara och allt verkar helt klart. Nu är det bara det sista finslipet och testningen kvar. Ska se till att kontraster är ok 
+och hur de ser ut i andra webbläsare.
+ Dessutom ska jag se till att det finns alt attribut i alla bilder
     <!-- Fyll på med dokumentation här. -->
 
-    <h3>Lektion vecka 11</h3>
-    <!-- Fyll på med dokumentation här. -->
 
-    <h3>Lektion vecka 12</h3>
-    <!-- Fyll på med dokumentation här. -->
 
     <h2>4. Testning</h2>
+    <h3>Webbläsare</h3>
+    Eftersom att jag har gjort hemsidan utifrån hur den ser ut i chrome så vet jag att det fungerar, när jag dock testade den i internet explorer blev det väldigt dåligt.
+    Väldigt lite av sidan ligger som dey ska, text trycks ut i kanten och grid fungerar mycket dåligt och den klarar inte av alla bokstäver helt perfekt. <br>
+    Meny sidan i IE:
+    <br>
+    <img src="IE_screen_meny.png" alt="">
+    <br>
+    Index sidan i IE:
+    <br>
+    <img src="IE_screen.png" alt="">
     <!-- Testa i Chrome + Firefox eller Safari (på både dator och mobil). Skiljer sig resultatet? Har du behövt anpassa ditt kod/innehåll efter de olika webbläsarna? Hur gick valideringen? Vad säger contrastchecker.com om text/bakgrundsfärg? Hur ser resultatet ut på en riktig telefon? -->
+    <br>
+    I Firefox såg dock allt perfekt ut och allt fungerade som det skulle. Det enda jag kunde notera var att animationen på länkar verkade lite hackig när texten skulle bli större tack vare a:hover.
+    <br>
+    <h3>Validering</h3>
+    Vid html validering fick jag inga errors på någon av hemsidorna, dock fick jag några få warnings på min index sida som handlade om articles och hur jag använde titlar men det var 
+    inget som jag ansåg var nödvändigt att åtgärda. <br>
+    I min css validering fick jag dock två errors:
+    <br>
+    <img src="Fel_css.png" alt="">
+    <br>
+    Det var alltså att jag hade satt max-height när jag egentligen inte behövde göra det så då tog jag bara bort det och sen var validering helt fine.
 
+    <h3>Kontrast</h3>
+    Att checka kontrasten var inte helt straight forward då jag använt bilder rätt så mycket som bakgrund. När jag har lagt på text på bilder har jag dock sett att kontrasten blivit lite smått dålig. Då har jag löst det
+    genom att först photoshopa bilden så den får en blur och sedan även göra den mörkare. Utöver det så la jag även till en svag bakgrunds skugga på texten för att öka kontrasten. Jag försökte checka kontrasten på min header i index men det var svårt att 
+    matcha färgerna exakt då det var en bild:
+    <br>
+    <img src="contrast_index_header.png" alt="">
+    <br>
+    Dock så har jag använt en specifik orange och blå ganska mycket som bakgrund så dom kunde jag också testa:
+    <br>
+    <img src="contrast_orange_black.png" alt="">
+    <img src="contrast_blue_black.png">
+    <br>
+    Kontrasten är sådär men på hemsidan har jag använt rätt så tjock text så jag upplever inte att det är något problem.
     <h2>5. Utvärdering</h2>
+
     <!-- Ex: Vad gick bra/mindre bra? (i arbetet/din förmåga).
     Nyanserat: "hur hade det blivit om jag istället hade...?"
     Konkreta förbättringsförslag i produkt + process. -->
+
+    Något jag tycker att jag speciellt har lyckats med är naven. Jag tycker att den är tydlig och passar in på resten av hemsidan. Dock kanske jag borde gjort det tydligare att man ska klicka på loggan för att komma till indexsidan.
+    <br>
+<br>
+    Jag tycker även att jag generellt sett har lyckats bra med kontrasten i “titeln” på hemsidan även om jag har lagt texten över en bild. Som jag beskrev ovan har jag ändrat bilderna i photoshop (lagt till blur och gjort dom mörka) men jag har även använt mig av ljus färg till texten och lagt till en svag skugga på den. Detta har jag gjort på alla tre sidor.
+    <br><br>
+    Jag tycker också att jag har lyckats bra med att uppnå symmetri och likformighet mellan sidorna. De har samma nav, samma stil på titeln, samma färger, samma footer etc.
+    <br><br>
+    Något som jag dock tycker att jag lyckats mindre bra med är kontrasten mellan loggan och resten av hemsidan. Först var idén att använda loggan utan den svarta bakgrunden, alltså den loggan som finns i “om oss” delen men när jag använde den i naven insåg jag att kontrasten blev rätt kass så då la jag till en bakgrund på den. För att förhindra detta till nästa gång så kanske jag ska utgå från att designa en logga redan från början med en liknande bakgrund så att jag vet att kontrasten kommer att funka. Jag borde nog även bestämma mig lite halvt på vilka färger jag ska använda till resten av hemsidan för att veta vad som då passar till loggan. Jag kanske även ska vänta med att designa loggan till lite senare i projektet och inte i början. 
+    <br><br>
+    Något annat jag önskar att jag hade gjort var att skissa mer för hand så att jag hade en tydligare aning om vad jag skulle göra på hemsidan. Nu blev det mer att jag tog det som det kom och bestämde mig för hur den skulle se ut efter hand. Om jag hade skissat mer hade det nog dessutom gått snabbare.
+
 
 </body>
 </html>

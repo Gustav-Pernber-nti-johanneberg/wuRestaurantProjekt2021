@@ -7,7 +7,7 @@ margin: 0;
 font-family: 'Josefin Sans', sans-serif;
 }
 
-#wrapper{
+#index_wrapper{
 
     display: grid;
     width: 100%;
@@ -24,15 +24,13 @@ font-family: 'Josefin Sans', sans-serif;
     grid-template-rows: 800px 700px 700px 150px ;
 }
 
-
-
 .header{
     grid-area: hd;
     background-image: url('../img/bakgrund1_ps.jpg');
     background-attachment: fixed;
     background-size: cover; 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 80px;
@@ -40,10 +38,12 @@ font-family: 'Josefin Sans', sans-serif;
 }
 
 .title{
+    align-self: center;
     color: wheat; 
     margin-top: 250px;
     text-shadow: 2px 3px 3px black;
     letter-spacing: 5px;
+    margin-bottom: 30px;
 }
 
 .under_title{
@@ -52,10 +52,7 @@ font-family: 'Josefin Sans', sans-serif;
     font-size: 40px;
     text-shadow: 2px 3px 3px black;
     letter-spacing: 3px;
-
 }
-
-
 
 .nav{
     padding-right: 110px;
@@ -70,7 +67,6 @@ font-family: 'Josefin Sans', sans-serif;
     grid-column: 1 / 5;
     grid-row: 1 / 1;
     height: 80px;
-    
 }
 
 .nav > ul{
@@ -79,9 +75,7 @@ font-family: 'Josefin Sans', sans-serif;
     justify-content: space-between;
     align-items: center;
     list-style: none;
-
 }
-
 
 .nav > ul > li > a {
 
@@ -92,35 +86,30 @@ font-family: 'Josefin Sans', sans-serif;
     font-size: 25px;
     background: rgb(255, 153, 64);
     border-radius: 5px;
-    transition: 500ms;
-
-
-    
+    transition: 200ms;    
 }
-
 
 .nav > ul > li > a:hover {
     background:wheat;
     font-size: 30px;
-    transition: 500ms;
+    transition: 200ms;
 }
 
-
-.nav > ul > li > a:active{
-    border: 6px solid wheat;
-    transition: 500ms;
+.nav > ul > li > .at_link{
+    background-color:  rgb(13, 157, 219);  
 }
 
 .nav_logo_img {
     max-width: 70px;
-    max-height: auto;
     padding-top: 5px;
+    transition: 500ms;
     
 }
 
-
-
-
+.nav_logo_img:hover {
+    max-width: 80px;
+    transition: 200ms; 
+}
 
 .news_hours{
     grid-area: a1;
@@ -137,8 +126,6 @@ font-family: 'Josefin Sans', sans-serif;
     grid-template-columns: auto 500px ;
     grid-template-rows: 1fr;
 }
-
-
 
 .hours{
     grid-area: ho;
@@ -164,8 +151,6 @@ font-family: 'Josefin Sans', sans-serif;
     margin-top: -20px;
     margin-bottom: 30px;
 }
-
-
 
 .news{
     background: rgb(255, 153, 64);
@@ -195,7 +180,6 @@ font-family: 'Josefin Sans', sans-serif;
     flex: 1;
     width: 100%;
     flex-wrap: nowrap;
-
 }
 
 .news_content{
@@ -206,7 +190,6 @@ font-family: 'Josefin Sans', sans-serif;
     flex-wrap: nowrap;
     width: 100%;
     margin: 25px;
-
 }
 
 .news_img{
@@ -217,7 +200,6 @@ font-family: 'Josefin Sans', sans-serif;
     height: auto;
     width: 120px;
     border-radius: 10px;
-
 }
 
 .news_title{
@@ -230,8 +212,6 @@ font-family: 'Josefin Sans', sans-serif;
     flex: 10%;
 }
 
-
-
 #om_oss{
     grid-area: s2;
     background-image: url('../img/bakgrund2_ps.jpg');
@@ -242,10 +222,7 @@ font-family: 'Josefin Sans', sans-serif;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   
-   
 }
-
 
 .om_oss_title > h1{
     color: wheat;
@@ -261,16 +238,11 @@ font-family: 'Josefin Sans', sans-serif;
     text-shadow: 2px 3px 3px black;
     font-size: 30px;
     margin-bottom: 80px;
-
 }
 
 #om_oss >img{
-    max-height: auto;
     max-width: 150px;
 }
-
-
-
 
 .footer{
     grid-area: fo;
@@ -279,41 +251,194 @@ font-family: 'Josefin Sans', sans-serif;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
 }
 
 .footer_wrapper{
-
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
-   
 
 }
 
-.footer_content{
-    /*color: rgb(255, 153, 64);*/
+.footer_content{ 
     font-size: 30px;
     letter-spacing: 1px;
-    position: absolute;
-    
-
+    position: absolute; 
 }
 
 .footer_wrapper > img{
     max-width: 80px;
     height: auto;
-   
-
     align-self: flex-start;
 
     margin-left: 30px;
-
-
-   /* -webkit-filter: grayscale(100%); 
-    filter: grayscale(100%); */
-
 }
 
+/*MENY MENY MENY MENY MENY*/
+
+
+#meny_wrapper{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: 
+    'hd hd hd hd'
+    'fo fo fo fo'
+    ;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2900px 150px;
+}
+
+#meny_wrapper > header{
+    background: url('../img/meny_background_ps.jpg');
+    background-position: 0px -100px;
+    background-size: cover;
+    justify-content: flex-start;
+    background-attachment: fixed;
+}
+
+#meny_title{
+    margin-top: 300px;
+}
+
+.meny_options{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 170px;
+}
+
+.meny_options > li > a{
+    padding:30px;
+    text-decoration: none;
+    color: wheat;
+    font-size: 30px;
+    transition: 300ms;   
+}
+
+.meny_options > li > a:hover{
+    font-size: 35px;
+    transition: 300ms;
+}
+
+.meny_food_title{
+    font-size: 40px;
+    color: wheat;
+    text-shadow: 1px 2px 2px black;
+    padding-top: 180px;
+}
+
+.meny_food{
+    flex-direction: row;
+    justify-content: space-around;
+    flex: 1;
+    display: flex;
+    list-style: none;  
+    flex-wrap: wrap; 
+    max-height: 400px;
+    margin-top: 60px;
+}
+
+.meny_food > li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    color: wheat;
+    text-shadow: 1px 2px 2px black;
+}
+
+.meny_food > li > h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.meny_food > li > p{
+    font-size: 20px;
+}
+
+/* BOKA BORD BOKA BORD BOKA BORD BOKA BORD BOKA BORD*/
+
+#boka_bord_wrapper{
+    display: grid;
+    grid-template-areas:
+    'hd hd hd hd'
+    'tm tm ho ho'
+    'fo fo fo fo'
+    ;
+    grid-template-rows: 800px 650px 150px;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    height: 100%;
+    background: url('../img/boka_bord_bakgrund_ps.jpg');
+    background-size: cover;
+    background-position: 0px -200px;
+    background-attachment: fixed;
+}
+
+#boka_bord_header{
+    background: none;
+}
+
+#boka_bord_title{
+    margin-bottom: 270px;
+}
+
+.tel_mail{
+    grid-area: tm;
+    background: rgb(255, 153, 64);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tel_mail > h3{
+    font-size: 60px ;
+}
+
+.tel_mail > p{
+    font-size: 50px;
+    margin-top: 15px ;
+}
+
+.tel_mail > a{
+    color: black;
+    text-decoration: none;
+    padding: 25px;
+    background: rgb(13, 157, 219);
+    border-radius: 15px;
+    font-size: 30px;
+    margin-top: 60px;
+    transition: 200ms;
+    padding-right: 35px;
+    padding-left: 35px;
+}
+
+.tel_mail > a:hover{
+    background:wheat;
+    font-size: 40px;
+    transition: 200ms;
+}
+
+.koordinater{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 30px;
+    margin-top: 30px;
+    font-weight: 200;
+    font-weight: 600;
+}
+
+.ko_norr{
+    margin-right: 30px;
+}
